@@ -1,0 +1,26 @@
+
+ <nav class="navbar navbar-expand-sm   navbar-light bg-light fixed-top">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <br><br>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item" *ngFor="let item of pageNav" (click)="onNav(item)">
+          <a class="nav-link" >{{item.name}}<span class="sr-only">(current)</span></a>
+        </li>
+       
+      </ul>
+     
+    </div>
+  </nav>
+  <br><br><br>
+
+
+ 
+  
+      <footer class="panel-footer custom-footer fixed-bottom bg-light" >
+         <p>&copy; Copyright 2019 CodeTribe</p>
+      </footer>
+  
+  
+ 
+
+<router-outlet></router-outlet>
