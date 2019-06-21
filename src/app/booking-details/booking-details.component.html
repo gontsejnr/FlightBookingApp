@@ -2,7 +2,7 @@
     <div class="container py-5 my-5">
         <div class="row text-center pb-4">
             <div class="col-md-12">
-                <h2 class="text-white siyah-cerceve">Travel With Us!!</h2>
+                <h2 class="text-white siyah-cerceve">Fly With Us!!</h2>
             </div>
         </div>
 
@@ -25,57 +25,150 @@
 		            </div>
 		            <div class="row">
 		                <div class="col-md-12">
-		                    <form>
+		                    
 
                               <div class="form-group row">
-                                <label for="username" class="col-4 col-form-label">User Name*</label> 
+                                <label for="title" class="col-4 col-form-label">Title</label> 
                                 <div class="col-8">
-                                  <input id="username" name="username" placeholder="Username" class="form-control here" required="required" type="text">
+                                  <input id="username" value="{{title}}"  class="form-control here" type="text">
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="email" class="col-4 col-form-label">Email*</label> 
-                                <div class="col-8">
-                                  <input id="email" name="email" placeholder="Email" required="required" class="form-control here" type="text">
+                                  <label for="fName" class="col-4 col-form-label">Name</label> 
+                                  <div class="col-8">
+                                    <input id="fName" value="{{fName}}"  class="form-control here" type="text">
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="name" class="col-4 col-form-label">First Name</label> 
-                                <div class="col-8">
-                                  <input id="name" name="name" placeholder="First Name" class="form-control here" type="text">
+                                <div class="form-group row">
+                                    <label for="lName" class="col-4 col-form-label">Surname</label> 
+                                    <div class="col-8">
+                                      <input id="lName" value="{{lName}}"  class="form-control here" type="text">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                      <label for="dateOfBirth" class="col-4 col-form-label">Date of Birth</label> 
+                                      <div class="col-8">
+                                        <input id="dateOfBirth" value="{{dateOfBirth}}"  class="form-control here" type="date">
+                                      </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="gender" class="col-4 col-form-label">Gender</label> 
+                                        <div class="col-8">
+                                          <input id="gender" value="{{gender}}"  class="form-control here" type="text">
+                                        </div>
+                                      </div>
+                                      <div class="form-group row">
+                                          <label for="eMail" class="col-4 col-form-label">E-mail</label> 
+                                          <div class="col-8">
+                                            <input id="eMail" value="{{eMail}}"  class="form-control here" type="email">
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="homeNo" class="col-4 col-form-label">Home Phone</label> 
+                                            <div class="col-8">
+                                              <input id="homeNo" value="{{homeNo}}"  class="form-control here" type="text">
+                                            </div>
+                                          </div>
+                                          <div class="form-group row">
+                                              <label for="mobileNo" class="col-4 col-form-label">Mobile Phone</label> 
+                                              <div class="col-8">
+                                                <input id="mobileNo" value="{{mobileNo}}"  class="form-control here" type="text">
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="eContactName" class="col-4 col-form-label">Emegency Contact Name</label> 
+                                                <div class="col-8">
+                                                  <input id="eContactName" value="{{eContactName}}"  class="form-control here" type="text">
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                  <label for="ePhoneNo" class="col-4 col-form-label">Emegency Contact Number</label> 
+                                                  <div class="col-8">
+                                                    <input id="ePhoneNo" value="{{ePhoneNo}}"  class="form-control here" type="text">
+                                                  </div>
+                                                </div>
+
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Traveling Details</h4>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="card acik-renk-form">
+                                                            <div class="card-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group ">
+                                                                          <p>Trip Type:</p>
+                                                                            <select [(ngModel)]="tripType" id="iller" class="form-control" >
+                                                                                <option selected>One-way</option>
+                                                                                <option>Return</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group ">
+                                                                            <p>Depature:</p>
+                                                                            <input [(ngModel)]="departure" type="date" id="ilceler" class="form-control" > 
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group ">
+                                                                            <p>Return:</p>
+                                                                            <input [(ngModel)]="return" type="date" id="ilceler" class="form-control" > 
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group ">
+                                                                            <p>Class Type:</p>
+                                                                            <select [(ngModel)]="classType"  id="iller" class="form-control" >
+                                                                                <option selected>Economy</option>
+                                                                                <option>Business</option>
+                                                                                <option>First Class</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group ">
+                                                                            <p>No. of Adults:</p>
+                                                                            <input [(ngModel)]="noAdult" type="number" id="iller" class="form-control" >
+                                                                       </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group ">
+                                                                            <p>No. of Children:</p>
+                                                                            <input [(ngModel)]="noChild" type="number" id="iller" class="form-control" >
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="font-weight-light text-dark">Destination From OR Tambo</p>
+                                                                <div class="row">
+                                                                    <div class="col-md-9">
+                                                                        <div class="form-group ">
+                                                                            <input [(ngModel)]="destination" type="text" class="form-control" placeholder="Capetown, Durban, Wonderboom, East London">
+                                                                        </div>
+                                                                    </div>
+                                                                   
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                        
+                                                    </div>
+                                                </div>
+                             <br>
+                                <div class="form-group row">
+                                  <div class="offset-4 col-8">
+                                    <button type="submit" (click)="onPay()" class="btn btn-primary">Proceed to Payment</button>
+                                  </div>
                                 </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="lastname" class="col-4 col-form-label">Last Name</label> 
-                                <div class="col-8">
-                                  <input id="lastname" name="lastname" placeholder="Last Name" class="form-control here" type="text">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="website" class="col-4 col-form-label">Website</label> 
-                                <div class="col-8">
-                                  <input id="website" name="website" placeholder="Website" class="form-control here" type="text">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="pass" class="col-4 col-form-label">Password</label> 
-                                <div class="col-8">
-                                  <input id="pass" name="pass" placeholder="Password" class="form-control here" required="required" type="text">
-                                </div>
-                              </div>
-                             
-                              <div class="form-group row">
-                                <div class="offset-4 col-8">
-                                  <button name="submit" type="submit" class="btn btn-primary">Proceed to Payment</button>
-                                </div>
-                              </div>
-                            </form>
+                            
 		                </div>
 		            </div>
-		            
+		            <br><br>
 		        </div>
 		    </div>
 		</div>
 	</div>
 </div>
 <br><br>
+<p>{{economy}}</p>

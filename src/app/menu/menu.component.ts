@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  pageNav=[{path:"menu/home",name:"Home"},{path:"menu/service",name:"Service"},{path:"menu/booking-details",name:""}, {path:"menu/payment",name:""}]
+  pageNav=[{path:"home",name:"Home"},{path:"service",name:"Service"},{path:"booking-details",name:""}, {path:"payment",name:""}]
   
 constructor(private router: Router) { }
 
