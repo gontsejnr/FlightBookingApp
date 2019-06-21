@@ -1,12 +1,12 @@
 <section class="search-banner text-white py-3 form-arka-plan" id="search-banner">
-        <div class="container py-5 my-5">
-            <div class="row text-center pb-4">
-                <div class="col-md-12">
-                    <h2 class="text-white siyah-cerceve">Fly With Us!!</h2>
-                </div>
-            </div>
-
-        </div>
+		<div class="container py-5 my-5">
+			<div class="row text-center pb-4">
+				<div class="col-md-12">
+                        <h2 class="text-white siyah-cerceve">Book and Fly Safe With Us</h2>
+				</div>
+			</div>
+	
+		</div>
 	</section>
 	<br><br>
 	<hr>
@@ -34,8 +34,8 @@
                           </ul>
                       </div>
                       <div class="form-group">
-                          <label></label>
-                          <h2>{{flightAmount}}</h2>
+                          <label>Flight Cost</label>
+                          <h4>ZAR {{people}}*</h4>
                       </div>
                       <div class="form-group has-success">
                           <label for="cc-name" class="control-label">Destination</label>
@@ -67,13 +67,13 @@
                               </div>
                           </div>
                       </div>
-                      <div class="form-group">
+                   <!--   <div class="form-group">
                           <label for="x_zip" class="control-label">Class Type</label>
                           <input value="{{classType}}" id="x_zip" name="x_zip" type="text" class="form-control" value="" data-val="true" data-val-required="Please enter the ZIP/Postal code" autocomplete="postal-code">
                           <span class="help-block" data-valmsg-for="x_zip" data-valmsg-replace="true"></span>
-                      </div>
+                      </div> -->
                       <div>
-                          <button id="payment-button" type="submit" class="btn btn-lg btn-success btn-block" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i>
+                          <button id="payment-button" type="submit" class="btn btn-lg btn-primary btn-block" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i>
                               <i class="fa fa-lock fa-lg"></i> 
                               <span id="payment-button-amount ">Confirm</span>
                               <span id="payment-button-sending" style="display:none;">Sending…</span>
@@ -118,7 +118,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Payment amount</label>
-                                            <h2>#####</h2>
+                                            <h4>ZAR {{people}}*</h4>
                                         </div>
                                         <div class="form-group has-success">
                                             <label for="cc-name" class="control-label">Name on card</label>
@@ -156,7 +156,7 @@
                                             <span class="help-block" data-valmsg-for="x_zip" data-valmsg-replace="true"></span>
                                         </div>
                                         <div>
-                                            <button (click)="goHome()" id="payment-button" type="submit" class="btn btn-lg btn-success btn-block" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i>
+                                            <button (click)="goHome()" id="payment-button" type="submit" class="btn btn-lg btn-primary btn-block" data-toggle="modal" data-target="#product_view"><i class="fa fa-search"></i>
                                                 <i class="fa fa-lock fa-lg"></i> 
                                                 <span id="payment-button-amount ">Pay</span>
                                                 <span id="payment-button-sending" style="display:none;">Sending…</span>
@@ -169,5 +169,7 @@
                     </div>
                   </div>
         </div>
+
+        
 
       

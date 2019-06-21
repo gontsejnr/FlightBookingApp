@@ -11,18 +11,16 @@ export class BookingDetailsComponent implements OnInit {
   tripType: string;
   departure: string;
   return: string;
- classType;
+  classType;
  noAdults: number;
  noChild: number;
  destination: string;
 
- amount1= 1000;
+ amount1= 1000 * this.noAdults;
  amount2 = 2000;
  amount3 = 3000;
  flightAmount;
-
-
-
+ flightType;
 
   @Input() title: string;
   @Input() fName: string;
@@ -54,22 +52,20 @@ export class BookingDetailsComponent implements OnInit {
   console.log(this.title, this.fName, this.lName, this.dateOfBirth, this.gender, this.eMail, this.homeNo, this.mobileNo, this.eContactName, this.ePhoneNo);
     })
   }
-   amount(){
-   
-   }
 
    onPay(){
 
-    if(this.classType == "economy" ){
-      this.flightAmount =this.amount1;
-
+    if(this.flightType == "Economy" ){
+      this.flightAmount = this.amount1;
      }
-     else if(this.classType == "business"){
+     else if(this.flightType == "Business"){
        this.flightAmount = this.amount2;
      }
-     else if (this.classType == "firstClass"){
+     else if (this.flightType == "First"){
        this.flightAmount = this.amount3;
      }
+
+
 
      this.route.navigate(['/payment'], {queryParams:{tripType: this.tripType, departure:this.departure, return:this.return, classType:this.classType, noAdults:this.noAdults, 
       noChild:this.noChild, destination:this.destination, flightAmount:this.flightAmount}})
