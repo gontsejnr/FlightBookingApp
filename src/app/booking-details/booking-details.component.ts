@@ -16,11 +16,12 @@ export class BookingDetailsComponent implements OnInit {
  noChild: number;
  destination: string;
 
- amount1= 1000 * this.noAdults;
+ amount1= 1000;
  amount2 = 2000;
  amount3 = 3000;
  flightAmount;
  flightType;
+
 
   @Input() title: string;
   @Input() fName: string;
@@ -64,8 +65,6 @@ export class BookingDetailsComponent implements OnInit {
      else if (this.flightType == "First"){
        this.flightAmount = this.amount3;
      }
-
-
 
      this.route.navigate(['/payment'], {queryParams:{tripType: this.tripType, departure:this.departure, return:this.return, classType:this.classType, noAdults:this.noAdults, 
       noChild:this.noChild, destination:this.destination, flightAmount:this.flightAmount}})

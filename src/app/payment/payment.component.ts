@@ -17,7 +17,6 @@ export class PaymentComponent implements OnInit {
 @Input() noChild: number;
 @Input() destination: string;
 @Input() flightAmount;
-@Input() people;
 
 
   constructor(private router: ActivatedRoute, private route: Router) { }
@@ -33,13 +32,14 @@ export class PaymentComponent implements OnInit {
       this.noChild=params.noChild,
       this.destination=params.destination,
       this.flightAmount=params.flightAmount,
-      this.people=params.people
+      
 
-      console.log(this.tripType, this.departure, this.return, this.classType, this.noAdults, this.noChild, this.flightAmount, this.destination, this.people );
+      console.log(this.tripType, this.departure, this.return, this.classType, this.noAdults, this.noChild, this.flightAmount, this.destination,  );
         })
   }
   goHome(){
     this.route.navigateByUrl("home")
+    alert("Payment complete")
   }
 
 }
